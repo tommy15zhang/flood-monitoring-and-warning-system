@@ -24,13 +24,13 @@ def station_by_distance(stations, p):
     
 def station_within_radius(stations, centre, r):
     #The functions takes the input of 
-    station_c_r = []
+    fit_station = []
     for station in stations:
         dist = haversine(station.coord, centre)
         if dist <= r:
-            station_c_r.append(station.name)
+            fit_station.append(station.name)
                    
-    station_c_r = sorted(station_c_r) 
-    return station_c_r
+    fit_station = sorted(fit_station)  # why fit_station.sort() will fail at here.
+    return fit_station
             
             
