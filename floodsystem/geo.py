@@ -5,8 +5,7 @@
 geographical data.
 
 """
-
-from .utils import sorted_by_key  # noqa
+from .utils import sorted_by_key 
 from haversine import haversine, Unit   #import a new library to calculate distance between two stations
 
 
@@ -20,4 +19,18 @@ def station_by_distance(stations, p):
         sta_town_dis.append(a)
     sta_town_dis = sorted_by_key(sta_town_dis, 2)
     return sta_town_dis    
-     
+
+    
+    
+def station_within_radius(stations, centre, r):
+    #The functions takes the input of 
+    station_c_r = []
+    for station in stations:
+        dist = haversine(station.coord, centre)
+        if dist <= r:
+            station_c_r.append(station.name)
+                   
+    station_c_r = sorted(station_c_r) 
+    return station_c_r
+            
+            
