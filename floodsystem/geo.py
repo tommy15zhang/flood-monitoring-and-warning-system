@@ -30,7 +30,7 @@ def station_within_radius(stations, centre, r):
         if dist <= r:
             fit_station.append(station.name)
                    
-    fit_station = sorted(fit_station)  # why fit_station.sort() will fail at here.
+    fit_station = sorted(fit_station)  # why fit_station.sort() will fail here?
     return fit_station
             
             
