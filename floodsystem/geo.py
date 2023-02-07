@@ -35,10 +35,12 @@ def station_within_radius(stations, centre, r):
             
             
 def rivers_with_station(stations):
+    
     river_name = set()
     for station in stations:
         river_name.add(f"{station.river}")
     return sorted(river_name)
+
 def stations_by_river(stations):
     river_dict = {}
     for station in stations:
@@ -47,13 +49,19 @@ def stations_by_river(stations):
         elif station.river in rivers_with_station(stations):
             river_dict[station.river].append(station.name)
     return river_dict
+
 def rivers_by_station_number(stations, N):
+    #
     river_dict = stations_by_river(stations)
     river_station_num = []
     for i in river_dict.keys():
         z = (i, len(river_dict[i]))
         river_station_num.append(z)
+        
+        
+        
     # river_station_num.sort(key-lambda a: a[1], reverse = True) not sure about why we use a : a[1]
+    
     river_station_num = sorted_by_key(river_station_num, 1, True)
     while river_station_num[N][1] != river_station_num[N+1][1]:
         N = N + 1
