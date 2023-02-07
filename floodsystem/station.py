@@ -51,7 +51,12 @@ class MonitoringStation:
         return d
 
 
+""" Task 1F """
+
+
 def inconsistent_typical_range_stations(stations):
+    # given a list of station objects, this function returns a list of stations that have inconsistent data
+    
     inconsistent_station = []
     for station in stations:
         if station.typical_range_consistent() == False:

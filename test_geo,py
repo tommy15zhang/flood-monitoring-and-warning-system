@@ -11,6 +11,7 @@ from floodsystem.station import inconsistent_typical_range_stations
 
 def test_station_by_distance():
     
+
     p = (52.2053, 0.1218)    
     
     station_by_distance(build_station_list(), p)
@@ -20,6 +21,7 @@ def test_station_within_radius():
     r = 10
     
     centre = (52.2053, 0.1218)
+    
     
     assert type(station_within_radius(build_station_list(), centre, r)) == list
 
@@ -42,4 +44,3 @@ def test_inconsistent_typical_range_stations():
     inconsistent_typical_range_stations(build_station_list())
     
 
-test_inconsistent_typical_range_stations()
