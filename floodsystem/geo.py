@@ -55,7 +55,8 @@ def stations_by_river(stations):
     for station in stations:
         if station.river not in river_dict:
             river_dict[station.river] = [station.name]
-        elif station.river in rivers_with_station(stations):
+        # elif station.river in rivers_with_station(stations):
+        else:
             river_dict[station.river].append(station.name)
     return river_dict
 
