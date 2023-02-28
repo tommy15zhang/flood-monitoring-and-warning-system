@@ -81,12 +81,12 @@ def test_plot_water_levels():
     for station in fake_stations:
         dates, levels = fetch_measure_levels(station.measure_id,
                                          dt=datetime.timedelta(days=dt))
-        assert plot_water_levels(station, dates, levels)
+        assert plot_water_levels(station, dates, levels) == None
         
 
 def test_plot_water_levels_with_lists():
     stations = fake_station_list()
-    assert plot_water_levels_with_lists(stations)
+    assert plot_water_levels_with_lists(stations) == None
 
 
 
@@ -97,7 +97,7 @@ def test_plot_water_level_with_fit():
     for station in stations:
         dates, levels = fetch_measure_levels(station.measure_id,
                                          dt=datetime.timedelta(days=dt))
-        assert plot_water_level_with_fit(station, dates, levels, p)
+        assert plot_water_level_with_fit(station, dates, levels, p) == None
     
 
 
@@ -108,6 +108,6 @@ def test_plot_water_level_with_fit_future():
     for station in stations:
         dates, levels = fetch_measure_levels(station.measure_id,
                                          dt=datetime.timedelta(days=dt))
-        assert plot_water_level_with_fit_future(station, dates, levels, p)
+        assert plot_water_level_with_fit_future(station, dates, levels, p) == None
         
 
