@@ -25,3 +25,7 @@ def test_create_monitoring_station():
     assert s.typical_range == trange
     assert s.river == river
     assert s.town == town
+
+
+
+## not sure if i need to write test for attribute and method here.(do it at the end)

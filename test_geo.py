@@ -1,4 +1,3 @@
-from floodsystem.stationdata import build_station_list
 from floodsystem.geo import station_by_distance
 from floodsystem.geo import station_within_radius
 from floodsystem.geo import rivers_with_station
@@ -18,17 +17,17 @@ def fake_station_list():
     # station 1
     label_A = "some stationA"
     coord_A = (-4.0, 4.0)
-    trange_A = (-2.3, 3.4445)
+    trange_A = (2, 3.4445)
     river_A = "River A"
     town_A = "My Town A"
     
     A = MonitoringStation(s_id, m_id, label_A, coord_A, trange_A, river_A, town_A)
-
+    
     # station 2
     
     label_B = "some stationB"
     coord_B = (-10.0, 4.0)
-    trange_B = (-2.3, 4.4445)
+    trange_B = (1, 4.4445)
     river_B = "River B"
     town_B = "My Town B"
     
@@ -37,7 +36,7 @@ def fake_station_list():
     # station 3
     label_C = "some stationC"
     coord_C = (-13.0, 4.0)
-    trange_C = (-2.3, 5.4445)
+    trange_C = (3, 5.4445)
     river_C = "River C"
     town_C = "My Town C"
     
@@ -46,7 +45,7 @@ def fake_station_list():
     # station 4
     label_D = "some stationD"
     coord_D = (-15.0, 4.0)
-    trange_D = (-2.3, 6.4445)
+    trange_D = (4, 6.4445)
     river_D = "River D"
     town_D = "My Town D"
     
@@ -55,7 +54,7 @@ def fake_station_list():
     # station 5
     label_E = "some stationE"
     coord_E = (-17.0, 4.0)
-    trange_E = (-2.3, 7.4445)
+    trange_E = (5, 7.4445)
     river_E = "River E"
     town_E = "My Town"
     

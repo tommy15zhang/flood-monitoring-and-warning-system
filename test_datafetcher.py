@@ -7,7 +7,7 @@ import datetime
 
 from floodsystem.datafetcher import fetch_measure_levels
 from floodsystem.stationdata import build_station_list
-
+from floodsystem.datafetcher import fetch_measure_levels
 
 def test_build_station_list():
 
@@ -35,3 +35,12 @@ def test_build_station_list():
         station_cam.measure_id, dt=datetime.timedelta(days=dt))
     assert len(dates10) == len(levels10)
     assert len(dates10) > len(levels2)
+
+
+def test_fetch_measure_levels():
+    dt = 1
+    measure_id = 'http://environment.data.gov.uk/flood-monitoring/id/measures/52119-level-stage-i-15_min-mASD'
+    assert len(fetch_measure_levels(measure_id,
+                                     dt=datetime.timedelta(hours=dt))) == 2
+
+test_fetch_measure_levels()
