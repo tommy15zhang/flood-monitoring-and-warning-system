@@ -1,5 +1,5 @@
 from floodsystem.plot import plot_water_levels, plot_water_levels_with_lists, plot_water_level_with_fit, plot_water_level_with_fit_future
-import numpy as np
+import numpy
 from floodsystem.station import MonitoringStation
 from floodsystem.datafetcher import fetch_measure_levels
 import datetime
@@ -108,6 +108,7 @@ def test_plot_water_level_with_fit_future():
     for station in stations:
         dates, levels = fetch_measure_levels(station.measure_id,
                                          dt=datetime.timedelta(days=dt))
-        assert type(plot_water_level_with_fit_future(station, dates, levels, p)) == np.poly1d
+        assert type(plot_water_level_with_fit_future(station, dates, levels, p)) == numpy.poly1d
+
         
 
