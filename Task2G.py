@@ -56,10 +56,10 @@ for station in new_list:
     else:
         print(f'risk level of {station.name} = low')
         
-# > high range + rising = servere
-# > high range + falling = high
-# < high range + rising = moderate
-# < high range + falling = low
+# > high range AND rising = servere
+# > high range AND falling = high
+# < high range AND rising = moderate
+# < high range AND falling = low
 
 print(f'severe_town_list = {severe_town_list}')       
     

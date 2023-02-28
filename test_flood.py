@@ -81,4 +81,3 @@ def test_stations_highest_rel_level():
     x = stations_highest_rel_level(fake_station_list(), N)
     assert x == [('some stationA', 0.12272448353446513), ('some stationB', 0.11612715923936709)]
     
-test_stations_highest_rel_level()

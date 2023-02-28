@@ -1,6 +1,4 @@
 from floodsystem.analysis import polyfit
-import datetime
-from floodsystem.datafetcher import fetch_measure_levels
 import numpy
 
 
@@ -16,4 +14,3 @@ def test_polyfit():
     assert type(date0) == int
     
     
-test_polyfit()
