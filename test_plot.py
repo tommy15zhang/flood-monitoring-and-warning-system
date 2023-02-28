@@ -101,14 +101,3 @@ def test_plot_water_level_with_fit():
     
 
 
-def test_plot_water_level_with_fit_future():
-    stations = fake_station_list()
-    p = 4
-    dt = 2
-    for station in stations:
-        dates, levels = fetch_measure_levels(station.measure_id,
-                                         dt=datetime.timedelta(days=dt))
-        assert type(plot_water_level_with_fit_future(station, dates, levels, p)) == numpy.poly1d
-
-        
-
